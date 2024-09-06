@@ -7,13 +7,21 @@ terraform {
     }
   }
 }
+  # backend "s3" {
+  #   bucket         = "teamusa-test-bucket"
+  #   region         = "us-east-2"
+  #   key            = "eks/terraform.tfstate"
+  #   # dynamodb_table = "Lock-Files"
+  #   # encrypt        = true
+  # }
+
+  terraform {
   backend "s3" {
-    bucket         = "teamusa-test-bucket"
-    region         = "us-east-2"
-    key            = "eks/terraform.tfstate"
-    # dynamodb_table = "Lock-Files"
-    # encrypt        = true
+    bucket = "s3-bucket-projects"
+    key    = "proj1/terraform.tfstate"
+    region = "us-east-2"
   }
+}
 
 
 provider "aws" {
