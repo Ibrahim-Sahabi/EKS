@@ -15,7 +15,7 @@ on:
         - apply
         - destroy
         required: true
-        default: 'apply'
+        default: 'destroy'
 
 env:
       AWS_REGION: us-east-2
