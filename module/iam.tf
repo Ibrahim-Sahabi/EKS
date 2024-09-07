@@ -94,4 +94,4 @@ resource "aws_iam_role_policy_attachment" "eks-AmazonEBSCSIDriverPolicy" {
 # resource "aws_iam_role_policy_attachment" "eks-oidc-policy-attach" {
 #   role       = aws_iam_role.eks_oidc.name
 #   policy_arn = aws_iam_policy.eks-oidc-policy.arn
-}
+#}
